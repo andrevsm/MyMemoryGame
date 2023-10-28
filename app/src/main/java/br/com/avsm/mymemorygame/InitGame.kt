@@ -52,8 +52,6 @@ class InitGame : AppCompatActivity() {
 
         val tempoDecorrido = this.intent.getLongExtra("tempoDecorrido", 0L)
         if (tempoDecorrido != 0L) {
-//            val recorde = Recorde(tempoDecorrido)
-//            recordeAdapter.adicionarRecorde(recorde)
             val historico = sharedPreferences.getString("historico", "") ?: ""
             val novoHistorico = "$historico\n$tempoDecorrido"
             val editor = sharedPreferences.edit()
